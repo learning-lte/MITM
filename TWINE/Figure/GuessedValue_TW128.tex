@@ -1,0 +1,460 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{pgffor}
+\usetikzlibrary{patterns}
+\begin{document}
+\begin{tikzpicture}[scale=0.35]
+\foreach \z in {0,1,2,3,4}{
+\begin{scope}[yshift = -\z* 5 cm]
+\node[left] at (0,0.5) {\tiny Round \z};
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw[->] (0.5,0)|- +(1,-1.5);
+\draw (4,0) grid +(1,1);
+\draw (1.75,-1.5) circle (0.25);
+\draw (1.75,-1.25) --+(0,-0.5);
+\draw[->] (1.5,-1.5) --(2.5,-1.5);
+\draw (2.5,-1.75) rectangle + (1,0.5);
+\draw[->](3.5,-1.5)--(4.25,-1.5);
+\draw (4.5,-1.5) circle (0.25);
+\draw (4.25,-1.5) -- +(0.5,0);
+\draw (4.5,0)--+(0,-2);
+\draw[->](0.5,-3)--+(0,-1);
+\draw[->](4.5,-3)--+(0,-1);
+\draw (0.5,-1.5)--+(0,-0.5);
+\draw (-1,-0.75) rectangle node[left=5pt]{\tiny{RK}} +(1,0.5);
+\draw[->]  (0,-0.5) -|(1.75,-1.25);
+\draw[->] (1.75,-0.5)  --(1.75,-1.25);
+\end{scope}
+
+}
+\end{scope}
+}
+
+\foreach \z in {0,1,2,3,4}{
+\begin{scope}[yshift = -\z* 5 cm]
+\draw (0.5,-2)--(18.5,-3);
+\draw (4.5,-2)--(0.5,-3);
+\draw (7.5,-2)--(4.5,-3);
+\draw (11.5,-2)--(14.5,-3);
+\draw (14.5,-2)--(25.5,-3);
+\draw (18.5,-2)--(42.5,-3);
+\draw (21.5,-2)--(11.5,-3);
+\draw (25.5,-2)--(28.5,-3);
+\draw (28.5,-2)--(46.5,-3);
+\draw (32.5,-2)--(21.5,-3);
+\draw (35.5,-2)--(32.5,-3);
+\draw (39.5,-2)--(7.5,-3);
+\draw (42.5,-2)--(53.5,-3);
+\draw (46.5,-2)--(35.5,-3);
+\draw (49.5,-2)--(39.5,-3);
+\draw (53.5,-2)--(49.5,-3);
+\end{scope}
+}
+
+\begin{scope}[yshift = -25cm]
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw (4,0) grid +(1,1);
+\end{scope}
+}
+
+\node[left] at (0,0.5) {\tiny Round 5};
+\end{scope}
+\begin{scope}[yshift = -25cm]
+\draw[dashed] (-0.2,1.2) rectangle node{\scriptsize 11-round Distinguisher} +(54.4,-6.4);
+\end{scope}
+
+\foreach \z in {6,7,8,9,10,11,12,13,14}{
+\begin{scope}[yshift = -\z* 5 cm]
+\node[left] at (0,0.5) {\tiny Round\pgfmathparse{int((\z-1)+11)}\pgfmathresult};
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw[->] (0.5,0)|- +(1,-1.5);
+\draw (4,0) grid +(1,1);
+\draw (1.75,-1.5) circle (0.25);
+\draw (1.75,-1.25) --+(0,-0.5);
+\draw[->] (1.5,-1.5) --(2.5,-1.5);
+\draw (2.5,-1.75) rectangle + (1,0.5);
+\draw[->](3.5,-1.5)--(4.25,-1.5);
+\draw (4.5,-1.5) circle (0.25);
+\draw (4.25,-1.5) -- +(0.5,0);
+\draw (4.5,0)--+(0,-2);
+\draw[->](0.5,-3)--+(0,-1);
+\draw[->](4.5,-3)--+(0,-1);
+\draw (0.5,-1.5)--+(0,-0.5);
+\draw (-1,-0.75) rectangle node[left=5pt]{\tiny{RK}} +(1,0.5);
+\draw[->]  (0,-0.5) -|(1.75,-1.25);
+\draw[->] (1.75,-0.5)  --(1.75,-1.25);
+\end{scope}
+
+}
+\end{scope}
+}
+
+\foreach \z in {6,7,8,9,10,11,12,13,14}{
+\begin{scope}[yshift = -\z* 5 cm]
+\draw (0.5,-2)--(18.5,-3);
+\draw (4.5,-2)--(0.5,-3);
+\draw (7.5,-2)--(4.5,-3);
+\draw (11.5,-2)--(14.5,-3);
+\draw (14.5,-2)--(25.5,-3);
+\draw (18.5,-2)--(42.5,-3);
+\draw (21.5,-2)--(11.5,-3);
+\draw (25.5,-2)--(28.5,-3);
+\draw (28.5,-2)--(46.5,-3);
+\draw (32.5,-2)--(21.5,-3);
+\draw (35.5,-2)--(32.5,-3);
+\draw (39.5,-2)--(7.5,-3);
+\draw (42.5,-2)--(53.5,-3);
+\draw (46.5,-2)--(35.5,-3);
+\draw (49.5,-2)--(39.5,-3);
+\draw (53.5,-2)--(49.5,-3);
+\end{scope}
+}
+
+\begin{scope}[yshift = -75cm]
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[ xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw (4,0) grid +(1,1);
+\end{scope}
+}
+
+\node[left] at (0,0.5) {\tiny Round 25};
+\end{scope}
+\begin{scope}[yshift = -0cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -5cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -10cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -15cm]
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -20cm]
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (42,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -25cm]
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -30cm]
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -35cm]
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -40cm]
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -45cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -50cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -55cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -60cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -65cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -70cm]
+\fill[orange] (2.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (-1,-0.75) rectangle+(1,0.5);
+\fill[orange] (9.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (6,-0.75) rectangle+(1,0.5);
+\fill[orange] (16.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (13,-0.75) rectangle+(1,0.5);
+\fill[orange] (23.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (20,-0.75) rectangle+(1,0.5);
+\fill[orange] (30.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (27,-0.75) rectangle+(1,0.5);
+\fill[orange] (37.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (34,-0.75) rectangle+(1,0.5);
+\fill[orange] (44.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (41,-0.75) rectangle+(1,0.5);
+\fill[orange] (51.5,-1.75) rectangle+(1,0.5);
+\fill[orange] (48,-0.75) rectangle+(1,0.5);
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+\begin{scope}[yshift = -75cm]
+\fill[orange] (0,0) rectangle+(1,1);
+\fill[orange] (4,0) rectangle+(1,1);
+\fill[orange] (7,0) rectangle+(1,1);
+\fill[orange] (11,0) rectangle+(1,1);
+\fill[orange] (14,0) rectangle+(1,1);
+\fill[orange] (18,0) rectangle+(1,1);
+\fill[orange] (21,0) rectangle+(1,1);
+\fill[orange] (25,0) rectangle+(1,1);
+\fill[orange] (28,0) rectangle+(1,1);
+\fill[orange] (32,0) rectangle+(1,1);
+\fill[orange] (35,0) rectangle+(1,1);
+\fill[orange] (39,0) rectangle+(1,1);
+\fill[orange] (42,0) rectangle+(1,1);
+\fill[orange] (46,0) rectangle+(1,1);
+\fill[orange] (49,0) rectangle+(1,1);
+\fill[orange] (53,0) rectangle+(1,1);
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}

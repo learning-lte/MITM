@@ -1,0 +1,497 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{pgffor}
+\usetikzlibrary{patterns}
+\begin{document}
+\begin{tikzpicture}[scale=0.35]
+\foreach \z in {0,1,2,3,4,5,6,7,8,9,10}{
+\begin{scope}[yshift = -\z* 5 cm]
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw[->] (0.5,0)|- +(1,-1.5);
+\draw (4,0) grid +(1,1);
+\draw (1.75,-1.5) circle (0.25);
+\draw (1.75,-1.25) --+(0,-0.5);
+\draw[->] (1.5,-1.5) --(2.5,-1.5);
+\draw (2.5,-1.75) rectangle + (1,0.5);
+\draw[->](3.5,-1.5)--(4.25,-1.5);
+\draw (4.5,-1.5) circle (0.25);
+\draw (4.25,-1.5) -- +(0.5,0);
+\draw (4.5,0)--+(0,-2);
+\draw[->](0.5,-3)--+(0,-1);
+\draw[->](4.5,-3)--+(0,-1);
+\draw (0.5,-1.5)--+(0,-0.5);
+\draw[->] (1.75,-0.5) node[above]{\tiny{RK}} --(1.75,-1.25);
+\end{scope}
+
+}
+\end{scope}
+}
+
+\foreach \z in {0,1,2,3,4,5,6,7,8,9,10}{
+\begin{scope}[yshift = -\z* 5 cm]
+\node[left] at (0,0.5) {\tiny Round \z};
+\draw (0.5,-2)--(18.5,-3);
+\draw (4.5,-2)--(0.5,-3);
+\draw (7.5,-2)--(4.5,-3);
+\draw (11.5,-2)--(14.5,-3);
+\draw (14.5,-2)--(25.5,-3);
+\draw (18.5,-2)--(42.5,-3);
+\draw (21.5,-2)--(11.5,-3);
+\draw (25.5,-2)--(28.5,-3);
+\draw (28.5,-2)--(46.5,-3);
+\draw (32.5,-2)--(21.5,-3);
+\draw (35.5,-2)--(32.5,-3);
+\draw (39.5,-2)--(7.5,-3);
+\draw (42.5,-2)--(53.5,-3);
+\draw (46.5,-2)--(35.5,-3);
+\draw (49.5,-2)--(39.5,-3);
+\draw (53.5,-2)--(49.5,-3);
+\end{scope}
+}
+
+\begin{scope}[yshift = -55cm]
+\node[left] at (0,0.5) {\tiny Round 11};
+\foreach \x  in {0,1,...,7}
+{
+\begin{scope}[ xshift = \x*7 cm]
+\draw (0,0) grid +(1,1);
+\draw (4,0) grid +(1,1);
+\end{scope}
+}
+
+\end{scope}
+\begin{scope}[yshift = -0cm]
+\end{scope}
+
+\begin{scope}[yshift = -5cm]
+\fill[red] (16.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -10cm]
+\fill[red] (44.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -15cm]
+\fill[red] (30.5,-1.75) rectangle+(1,0.5);
+\fill[red] (37.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -20cm]
+\fill[red] (9.5,-1.75) rectangle+(1,0.5);
+\fill[red] (23.5,-1.75) rectangle+(1,0.5);
+\fill[red] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -25cm]
+\fill[red] (16.5,-1.75) rectangle+(1,0.5);
+\fill[red] (23.5,-1.75) rectangle+(1,0.5);
+\fill[red] (30.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -30cm]
+\fill[red] (2.5,-1.75) rectangle+(1,0.5);
+\fill[red] (30.5,-1.75) rectangle+(1,0.5);
+\fill[red] (44.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -35cm]
+\fill[red] (9.5,-1.75) rectangle+(1,0.5);
+\fill[red] (23.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -40cm]
+\fill[red] (16.5,-1.75) rectangle+(1,0.5);
+\fill[red] (30.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -45cm]
+\fill[red] (23.5,-1.75) rectangle+(1,0.5);
+\fill[red] (44.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -50cm]
+\end{scope}
+
+\begin{scope}[yshift = -0cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -5cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -10cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -15cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -20cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (53,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -25cm]
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (49,0) rectangle+(1,1);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -30cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north west lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -35cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north west lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north west lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north west lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\fill[pattern = north east lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -40cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north west lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (18,0) rectangle+(1,1);
+\fill[pattern = north west lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\fill[pattern = north east lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -45cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north west lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north west lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north west lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\fill[pattern = north east lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north west lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -50cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north west lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north west lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\fill[pattern = north east lines] (2.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (9.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (16.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (23.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (30.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (37.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (44.5,-1.75) rectangle+(1,0.5);
+\fill[pattern = north east lines] (51.5,-1.75) rectangle+(1,0.5);
+\end{scope}
+
+\begin{scope}[yshift = -55cm]
+\fill[pattern = north east lines] (0,0) rectangle+(1,1);
+\fill[pattern = north east lines] (4,0) rectangle+(1,1);
+\fill[pattern = north east lines] (7,0) rectangle+(1,1);
+\fill[pattern = north east lines] (11,0) rectangle+(1,1);
+\fill[pattern = north east lines] (14,0) rectangle+(1,1);
+\fill[pattern = north east lines] (18,0) rectangle+(1,1);
+\fill[pattern = north east lines] (21,0) rectangle+(1,1);
+\fill[pattern = north east lines] (25,0) rectangle+(1,1);
+\fill[pattern = north east lines] (28,0) rectangle+(1,1);
+\fill[pattern = north east lines] (32,0) rectangle+(1,1);
+\fill[pattern = north west lines] (32,0) rectangle+(1,1);
+\fill[pattern = north east lines] (35,0) rectangle+(1,1);
+\fill[pattern = north east lines] (39,0) rectangle+(1,1);
+\fill[pattern = north east lines] (42,0) rectangle+(1,1);
+\fill[pattern = north east lines] (46,0) rectangle+(1,1);
+\fill[pattern = north west lines] (46,0) rectangle+(1,1);
+\fill[pattern = north east lines] (49,0) rectangle+(1,1);
+\fill[pattern = north east lines] (53,0) rectangle+(1,1);
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}
