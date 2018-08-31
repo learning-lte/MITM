@@ -1,0 +1,95 @@
+
+Gurobi 7.0.1 (win64, Python) logging started 08/29/18 19:44:52
+
+Read LP format model from file LB_r11.lp
+Reading time = 0.01 seconds
+: 1988 rows, 1104 columns, 4928 nonzeros
+Optimize a model with 1988 rows, 1104 columns and 4928 nonzeros
+Variable types: 0 continuous, 1104 integer (1104 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 1576 rows and 920 columns
+Presolve time: 0.02s
+Presolved: 412 rows, 184 columns, 1240 nonzeros
+Variable types: 0 continuous, 184 integer (184 binary)
+
+Root relaxation: objective 5.600000e+00, 146 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.60000    0   80          -    5.60000      -     -    0s
+H    0     0                      19.0000000    5.60000  70.5%     -    0s
+     0     0   10.66667    0  128   19.00000   10.66667  43.9%     -    0s
+H    0     0                      14.0000000   10.66667  23.8%     -    0s
+     0     0     cutoff    0        14.00000   13.00002  7.14%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 16
+  Implied bound: 55
+  Clique: 76
+  Zero half: 3
+
+Explored 0 nodes (414 simplex iterations) in 0.10 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 14 19 
+Pool objective bound 14
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.400000000000e+01, best bound 1.400000000000e+01, gap 0.0000%
+Read LP format model from file LB_r5_r11_r5.lp
+Reading time = 0.02 seconds
+: 4734 rows, 3304 columns, 11744 nonzeros
+Optimize a model with 4734 rows, 3304 columns and 11744 nonzeros
+Variable types: 0 continuous, 3304 integer (3304 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 3855 rows and 2917 columns
+Presolve time: 0.06s
+Presolved: 879 rows, 387 columns, 2643 nonzeros
+Variable types: 0 continuous, 387 integer (387 binary)
+
+Root relaxation: objective 4.360000e+01, 517 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   43.60000    0  284          -   43.60000      -     -    0s
+     0     0   50.09487    0  333          -   50.09487      -     -    0s
+     0     0   50.78874    0  337          -   50.78874      -     -    0s
+     0     0   51.64559    0  347          -   51.64559      -     -    0s
+     0     0   52.13389    0  342          -   52.13389      -     -    0s
+     0     0   52.16598    0  357          -   52.16598      -     -    0s
+     0     0   52.17814    0  342          -   52.17814      -     -    0s
+     0     0   52.17999    0  349          -   52.17999      -     -    0s
+     0     0   52.18130    0  356          -   52.18130      -     -    0s
+     0     0   52.18677    0  351          -   52.18677      -     -    0s
+     0     0   52.18677    0  332          -   52.18677      -     -    0s
+H    0     0                      79.0000000   52.18677  33.9%     -    0s
+     0     2   52.18677    0  323   79.00000   52.18677  33.9%     -    0s
+*  221    15              11      69.0000000   60.17264  12.8%  93.2    1s
+
+Cutting planes:
+  Gomory: 4
+  Cover: 125
+  Implied bound: 147
+  Clique: 1065
+  MIR: 8
+  Zero half: 21
+
+Explored 245 nodes (25837 simplex iterations) in 1.63 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 69 79 
+Pool objective bound 69
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.900000000000e+01, best bound 6.900000000000e+01, gap 0.0000%
